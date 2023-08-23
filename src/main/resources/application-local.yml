@@ -1,11 +1,13 @@
-server:
-  port: 8080
 spring:
+  h2:
+    console:
+      path: /h2
+      enabled: true
   datasource:
-    url: ${PROJECT_DB_URL}
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ${PROJECT_DB_ID}
-    password: ${PROJECT_DB_PW}
+    url: jdbc:h2:mem:test;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
   jpa:
     defer-datasource-initialization: true
     hibernate:
