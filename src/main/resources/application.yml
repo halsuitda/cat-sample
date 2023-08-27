@@ -1,6 +1,17 @@
 server:
   port: 8080
+
+
 spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  cache:
+    type: redis
+  redis:
+    host: ${AWS_ELASTICACHE_END_POINT}
+    port: 6379
   datasource:
     url: ${PROJECT_DB_URL}
     driver-class-name: com.mysql.cj.jdbc.Driver

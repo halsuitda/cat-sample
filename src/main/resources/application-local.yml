@@ -1,4 +1,13 @@
 spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
   h2:
     console:
       path: /h2
