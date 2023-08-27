@@ -42,3 +42,5 @@ springdoc:
   default-produces-media-type: application/json
   paths-to-match:
     - /api/**
+  show-login-endpoint: true
+  show-oauth2-endpoints: true
