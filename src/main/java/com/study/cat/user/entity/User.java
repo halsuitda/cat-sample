@@ -4,6 +4,8 @@ import com.study.cat.audit.AuditTable;
 import com.study.cat.cart.entity.Cart;
 import com.study.cat.cat.entity.Cat;
 import com.study.cat.constant.LoginType;
+import com.study.cat.constant.Membership;
+import com.study.cat.constant.UserStatus;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -23,19 +25,34 @@ import java.util.Set;
 public class User extends AuditTable {
 
     @Column(nullable = false, unique = true)
+    @Setter
     private String email;
 
     @Column(nullable = false, unique = true)
+    @Setter
     private String nickName;
 
     @Column(nullable = false)
+    @Setter
     private String password;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
+    @Setter
     private LoginType loginType;
 
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Setter
+    private UserStatus userStatus;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Setter
+    private Membership membership;
+
     @ElementCollection(fetch = FetchType.EAGER)
+    @Setter
     private List<String> roles = new ArrayList<>();
 
     @ToString.Exclude
