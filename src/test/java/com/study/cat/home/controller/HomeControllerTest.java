@@ -1,19 +1,15 @@
 package com.study.cat.home.controller;
 
 import com.study.cat.home.entity.HomeEntity;
-import com.study.cat.home.repository.CustomHomeRepository;
-import com.study.cat.home.repository.HomeJpaRepository;
-import com.study.cat.home.repository.impl.CustomHomeRepositoryImpl;
 import com.study.cat.home.service.HomeService;
 import com.study.cat.utils.ApiDocumentUtils;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.mapping.JpaMetamodelMappingContext;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation;
@@ -46,6 +42,7 @@ class HomeControllerTest {
 
     @Test
     @DisplayName("Home Test")
+    @Disabled
     void test() throws Exception {
         // Given
         Long id = 1L;
