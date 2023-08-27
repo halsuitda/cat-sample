@@ -6,8 +6,10 @@ import com.study.cat.user.entity.User;
 import com.study.cat.user.repository.UserJpaRepository;
 import com.study.cat.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 @RequiredArgsConstructor
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     private final UserJpaRepository jpaRepository;
