@@ -7,8 +7,11 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ErrorCode implements ErrorCodeIfs{
 
-    ARGUMENT_MISMATCH_BAD_REQUEST(400, 14001, "잘못된 파라미터"),
-    INTERNAL_SERVER_ERROR(500, 15001, "서버 에러")
+    BAD_REQUEST(404, 14001, "Not Found"),
+    NOT_FOUND(404, 14002, "Not Found"),
+    ARGUMENT_MISMATCH_BAD_REQUEST(400, 14002, "잘못된 파라미터"),
+    DATA_ACCESS_ERROR(500, 15001, "Database Access 에러"),
+    INTERNAL_SERVER_ERROR(500, 15002, "서버 에러")
     ;
 
     private final Integer statusCode;
